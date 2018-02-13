@@ -1,42 +1,50 @@
-body {
-	background: red;
-	font-family: Helvetica, Arial, "Lucida Grande", sans-serif; 
-	font-size: 20px;
-	text-align: center;
+header {
+	text-align: left;
+	padding:10px 40px 40px 40px;
+	font: 48px Tahoma, Helvetica, Arial, Sans-Serif;
+	color: silver;
+	font-style: bold;
+	text-shadow: 0px 2px 3px #555;
 }
 
+body {
+	background-image: url(https://vignette.wikia.nocookie.net/tron/images/e/ed/Mcp_sark.jpg/revision/latest?cb=20140206222528);
+	background-repeat: no-repeat;
+	background-size: 1600px 750px;
+	/*color: white;*/
+	font: 24px Tahoma, Helvetica, Arial, Sans-Serif;
+	color: silver;
+	font-style: bold;
+	text-shadow: 0px 2px 3px #555;
+	/*font-size: 20px;*/
+	text-align: center;
+}
 input {
 	border: 2px solid #999;
 	/*font-family: Helvetica, sans-serif;*/
 	color: #999;
 }
-
 img {
   width: 169px;
   height: 290px;
   position: center;
 }
-
 h1 h2 h3 {
-	font-family: Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-
 #guess {
 	color: black;
 	font-size: 18px;
 	width: 40px;
 }
-
 #but1 {
 	color: black;
 	font-size: 18px;
 }
-
 #but2 {
 	color: black;
 	font-size: 18px;
 }
-
 #but3 {
 	color: black;
 	font-size: 18px;

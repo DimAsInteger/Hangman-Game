@@ -1,5 +1,5 @@
 // variables:
-var wordArray = ["knife", "kibble","hairy", "toy", "trainer", "sleepy", "eating"];
+var wordArray = ["flynn", "kibble","hairy", "toy", "trainer", "sleepy", "eating"];
 var word="";
 var answerArray = [];
 var discardArray = [];
@@ -8,12 +8,12 @@ var discardArray = [];
   function initialize(){
       word = wordArray[Math.floor(Math.random() * wordArray.length)];
       answerArray = [];
-      for (var i = 0; i < word.length; i++) {
-      answerArray[i] = "_";
+          for (var i = 0; i < word.length; i++) {
+            answerArray[i] = "_";
+          }
+      document.getElementById("answer").innerHTML= answerArray.join(" ");
+      document.getElementById("message").innerHTML= "Type a letter then press guess, or press quit to stop playing."
   }
-  document.getElementById("answer").innerHTML= answerArray.join(" ");
-  document.getElementById("message").innerHTML= "Type a letter then press guess, or press quit to stop playing."
-}
 initialize();
 
   function guessTime() {
@@ -25,14 +25,14 @@ initialize();
       output = "Please enter only a single letter";
     } else {
         var i=0;
-        //add to the array 
+        //add to the array
         for (i = 0; i < word.length; i++) {
             if (word[i] === guess) {
                 answerArray[i] = guess;
                 output = "Yeah, yeah " + "'"+guess+"'" + " is in there.";
             }
         }
-        
+
         // Update the game for remaining unknowns
         var remaining_letters = answerArray.length;
 
@@ -45,33 +45,33 @@ initialize();
 
             // all letters guessed
             if (remaining_letters == 0) {
-                  output = "You Win. I'm going to have to put you on the game grid.";
+                  output = "You win, Sark. I'm going to have to put you on the game grid.";
             }
 
             // incorrect guesses
             if (output === "") {
-                  output = "There's no " + "'"+guess+"'" + " in this word! Failed again!";
+                  output = "There's no " + "'"+guess+".'" + " Yet another failure, Sark. You're a discrace to the game.";
                   discardArray.push(guess);
             }
 
             if (discardArray.length > 7) {
                   output= "Muhahahahahah!  You're finished!  No more guesses for you!  Game over!";
                   }
-        
+
         document.getElementById("myFailures").innerHTML = discardArray.join(" ");
-        
+
         // update info
         document.getElementById("answer").innerHTML = answerArray.join(" ");
 
         // clear previous guess
         document.getElementById("guess").value = "";
-  } 
+  }
   //message assignment
   document.getElementById("message").innerHTML = output;
 }
 
 function hint() {
-    document.getElementById("message").innerHTML = "Just put something in the box! I'd rather be burned at the stake!";
+    document.getElementById("message").innerHTML = "Just put something in the box, Sark. I'd rather be derezzed!";
 }
 
 function quit() {
